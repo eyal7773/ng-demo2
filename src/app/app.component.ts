@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cake } from './interfaces/Cake';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo2';
+  cakes:Cake[]=[];
   someData:number = 1;
+
+  constructor() {
+    this.fillCakes();
+  }
+
+  fillCakes() {
+    this.cakes.push({name:'עוגת שוקולד',score:8});
+    this.cakes.push({name:'עוגת גבינה',score:10});
+    this.cakes.push({name:'עוגת גזר',score:7});
+  }
+
   add() {
     this.someData++;
   }
