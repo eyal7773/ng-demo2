@@ -1,7 +1,12 @@
 <h1> App Component</h1>
 <!--<button (click)="add()">Add</button>
  <app-input1 [item]="someData"></app-input1> -->
-<div style="direction: rtl;">
+<!-- <div style="direction: rtl;">
   <h2>מצעד העוגות</h2>
   <app-input-with-for *ngFor="let cake of cakes" [cake]="cake"></app-input-with-for>
-</div>
+</div> -->
+
+
+<app-output1 (changeNameEvent)="changeName($event)"></app-output1>
+
+(in Parent) Your name is : {{name}}

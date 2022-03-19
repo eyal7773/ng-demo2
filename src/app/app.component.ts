@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'demo2';
   cakes:Cake[]=[];
   someData:number = 1;
-
+  name:string = '';
   constructor() {
     this.fillCakes();
   }
@@ -24,4 +24,9 @@ export class AppComponent {
   add() {
     this.someData++;
   }
+
+  changeName(name:string) : void {
+    this.name = name;
+  }
+
 }

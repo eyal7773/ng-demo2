@@ -1,0 +1,7 @@
+<div>
+<label>
+    What is your name ?
+    <input type="text" placeholder="type your name..." #yourName>
+    <button (click)="changeNameEvent.emit(yourName.value)">Submit</button>
+</label>
+</div>
