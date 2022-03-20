@@ -1,0 +1,14 @@
+<h1>PIPES</h1>
+<p>His birthday is on {{birth | date }}.</p>
+<p>His birthday is on {{birth | date:"dd/MM/yyyy" }}.</p>
+<p>He was born at {{birth | date:"yyyy" }}.</p>
+<p>pipes of uppercase {{ 'cats' | uppercase}}</p>
+<p>pipes of lowercase {{ 'CATS' | uppercase}}</p>
+<p>pipe of currency {{total | currency:"NIS":'₪ ':'2.2-2' }}</p>
+<a href="https://angular.io/api/common/CurrencyPipe#usage-notes">ref here</a>
+<p>fee is {{ fee | percent }}</p>
+<p>slice pipe : {{ 'angular' | slice:3:8}}</p>
+<p>json pipe: {{ someObject | json}}</p>
+<p>json pipe: {{ someObject | json | uppercase}}</p>
+<p>number pipe: {{ 003.3484545  | number:'1.2-2'}}</p>
+<p>custom1: {{ 0.3 | custom1:3}}</p>
