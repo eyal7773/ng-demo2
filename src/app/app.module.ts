@@ -11,6 +11,9 @@ import {FormsModule } from '@angular/forms';
 import { TemplateVarComponent } from './template-var/template-var.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { Custom1Pipe } from './custom1.pipe';
+import { FormValidationComponent } from './form-validation/form-validation.component';
+import { UseMyServiceComponent } from './use-my-service/use-my-service.component';
+import { UseMyRxComponent } from './use-my-rx/use-my-rx.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { Custom1Pipe } from './custom1.pipe';
     TwoWayBindingsComponent,
     TemplateVarComponent,
     PipesComponent,
-    Custom1Pipe
+    Custom1Pipe,
+    FormValidationComponent,
+    UseMyServiceComponent,
+    UseMyRxComponent
   ],
   imports: [
     BrowserModule,
