@@ -14,6 +14,17 @@ import { Custom1Pipe } from './custom1.pipe';
 import { FormValidationComponent } from './form-validation/form-validation.component';
 import { UseMyServiceComponent } from './use-my-service/use-my-service.component';
 import { UseMyRxComponent } from './use-my-rx/use-my-rx.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { RouterModule,Routes } from '@angular/router';
+import { UseRouteParamComponent } from './use-route-param/use-route-param.component';
+
+
+const appRoutes: Routes = [
+  { path: '', component: TemplateVarComponent},
+  { path : 'about', component: PipesComponent},
+  { path: 'user/:id', component: UseRouteParamComponent}
+ ];
 
 @NgModule({
   declarations: [
@@ -27,12 +38,16 @@ import { UseMyRxComponent } from './use-my-rx/use-my-rx.component';
     Custom1Pipe,
     FormValidationComponent,
     UseMyServiceComponent,
-    UseMyRxComponent
+    UseMyRxComponent,
+    UsersComponent,
+    UseRouteParamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
